@@ -41,7 +41,6 @@ const getList = async (noCache: boolean) => {
         cover: v.children[0].thumbnail,
         timestamp: getTime(data.created),
         hot: parseFloat(v.detail_text.split(" ")[0]) * 10000,
-        const questionId = data.url.match(/question\/(\d+)/)?.[1] || data.id,
         url: `https://www.zhihu.com/question/${questionId}`,
         mobileUrl: `https://www.zhihu.com/question/${questionId}`,
       };
